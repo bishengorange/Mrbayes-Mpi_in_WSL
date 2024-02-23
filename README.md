@@ -11,17 +11,27 @@ Install Mrbayes software running multi-threaded on WSL (Windows Subsystem for Li
 To install WSL1, please take a look at the official tutorial of [WSL](https://learn.microsoft.com/en-us/windows/wsl/install).
 Or download WSL distribution in the Windows Microsoft store.
 
-### How to install WSL in the Windows Microsoft store
+### How to install WSL in the Windows Microsoft Store
 First, enable the WSL function, Follow these steps: 
+
 Windows Control Panel -> Programs and Features -> Turn Windows features on or off -> √ Windows Subsystem for Linux -> Restart.
+
 WSL2 is turned on by default and needs to be set to WSL1 in Powershell.
-```powershell
-# 设置默认WSL版本
-	wsl --set-default-version 1
-# wslconfig 查看帮助
-	wslconfig
-# 查看已经安装的子系统
-	wslconfig /list
-# 设置默认子系统 <Name> 为分发版名字
-	wslconfig /setdefault <Name>
+
+Set the default WSL version to WSL1：
+```PowerShell
+wsl --set-default-version 1
 ```
+Then search for WSL in the Windows Microsoft Store to download Ubuntu 22.04.4 LTS-WSL (You can also choose Debian, etc.)
+
+After the download is complete, install it and set the username and password after installation.
+
+WSL1 is installed successfully
+
+## 2 Install Ubuntu prerequisite software
+```bash
+sudo apt-get update && sudo apt-get upgrade # Update sources and packages
+sudo apt-get install -y gcc cmake build-essential autoconf automake subversion libtool git pkg-config openjdk-11-jdk
+```
+
+## 3 Download beagle-lib-3.1.2, openmpi-4.1.5 and mrbayes-3.2.7
