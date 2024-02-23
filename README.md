@@ -109,4 +109,7 @@ make
 sudo make install
 ```
 Thus, the installation was successful
-
+## Running multi-threaded Mrbayes
+```bash
+mpirun -np 4 mb # 4 cores running Mrbayes (number of cores depends on computer CPU)
+```
