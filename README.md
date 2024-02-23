@@ -108,5 +108,5 @@ cd mrbayes-3.2.7/ && ll
 make
 sudo make install
 ```
-
+Thus, the installation was successful
 
