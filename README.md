@@ -56,6 +56,7 @@ Installation sequence: beagle-lib-3.1.2 -> openmpi-4.1.5 -> mrbayes-3.2.7.
 ```bash
 cd
 cd beagle-lib-3.1.2 && ll
+./autogen.sh
 ./configure
 make
 sudo make install
